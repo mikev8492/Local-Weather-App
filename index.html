@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LocalWeatherApp</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <script src="script.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class='container'>
+      <div class="jumbotron">
+        <h1 class="display-3"><i class= 'fa fa-cloud'></i>Local Weather App</h1>
+        <div class="container" id="weather">
+          <div>
+            <h2 id="location">
+              <span id="city">city,</span>
+              <span id="country">country</span>
+            </h2>
+          </div>
+          <div class="container" id="data">
+            <div class="card">
+              <h5>Temperature</h5>
+              <p id="temp">
+                ...
+                <span id="tempUnit">&#x2103</span>
+                <!--celsius = &#x2103, fahrenheit = &x2109-->
+              </p>
+            </div>
+
+            <div class="card">
+              <h5>Cloud cover</h5>
+              <p id="cloud cover">
+                ...
+              </p>
+            </div>
+            <div class="card">
+              <h5>Humidity</h5>
+              <p id="humidity">
+                ...
+              </p>
+            </div>
+          </div>
+        </div>
+        <a class="btn btn-lg btn-outline-info" href="#" role="button">Get Forecast</a>
+      </div>
+    </div>
+
+    <footer class="footer fixed-bottom">
+      <div class="container">
+        <h3>Created by <strong>Michael V.</strong></h3>
+        <div id="icons">
+          <a target="blank" href="https://www.freecodecamp.com/mikev8492">
+            <i class="fa fa-free-code-camp fa-lg"></i>
+          </a>
+          <a target="blank" href="https://www.linkedin.com/in/michael-villarreal-66045bb8">
+            <i class="fa fa-linkedin-square fa-lg"></i>
+          </a>
+          <a target="blank" href="https://github.com/mikev8492">
+            <i class="fa fa-github fa-lg"></i>
+          </a>
+          <a target="blank" href="https://www.codepen.io/mikev8492">
+            <i class="fa fa-codepen fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
