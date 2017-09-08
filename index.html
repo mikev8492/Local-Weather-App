@@ -12,62 +12,60 @@
   <script src="script.js" type="text/javascript"></script>
 </head>
 <body>
-    <div class='container'>
-      <div class="jumbotron">
-        <h1 class="display-3"><i class= 'fa fa-cloud'></i>Local Weather App</h1>
-        <div class="container" id="weather">
-          <div>
-            <h2 id="location">
-              <span id="city">city,</span>
-              <span id="country">country</span>
-            </h2>
+  <div class='container'>
+    <div class="jumbotron">
+      <h1 class="display-3"><i class= 'fa fa-cloud'></i>Local Weather App</h1>
+      <div class="container" id="weather">
+        <div>
+          <h2 id="location">
+            <span id="city">city,</span>
+            <span id="country">country</span>
+          </h2>
+        </div>
+        <div class="container" id="data">
+          <div class="card col-md-3">
+            <h5>Temperature</h5>
+            <p id="temp">...
+            </p>
           </div>
-          <div class="container" id="data">
-            <div class="card">
-              <h5>Temperature</h5>
-              <p id="temp">
-                ...
-                <span id="tempUnit">&#x2103</span>
-                <!--celsius = &#x2103, fahrenheit = &x2109-->
-              </p>
-            </div>
+          <div class="card col-md-3">
+            <h5 id="description">Details</h5>
 
-            <div class="card">
-              <h5>Cloud cover</h5>
-              <p id="cloud cover">
-                ...
-              </p>
-            </div>
-            <div class="card">
-              <h5>Humidity</h5>
-              <p id="humidity">
-                ...
-              </p>
-            </div>
+            <p id="icon">
+
+              ...
+            </p>
+          </div>
+          <div class="card">
+            <h5>Humidity</h5>
+            <p id="humidity">
+              ...
+            </p>
           </div>
         </div>
-        <a class="btn btn-lg btn-outline-info" href="#" role="button">Get Forecast</a>
+      </div>
+      <a class="btn btn-lg btn-outline-info" href="#" role="button" id="btn">Get Forecast</a>
+    </div>
+  </div>
+
+  <footer class="footer fixed-bottom">
+    <div class="container">
+      <h3>Created by <strong>Michael V.</strong></h3>
+      <div id="icons">
+        <a target="blank" href="https://www.freecodecamp.com/mikev8492">
+          <i class="fa fa-free-code-camp fa-lg"></i>
+        </a>
+        <a target="blank" href="https://www.linkedin.com/in/michael-villarreal-66045bb8">
+          <i class="fa fa-linkedin-square fa-lg"></i>
+        </a>
+        <a target="blank" href="https://github.com/mikev8492">
+          <i class="fa fa-github fa-lg"></i>
+        </a>
+        <a target="blank" href="https://www.codepen.io/mikev8492">
+          <i class="fa fa-codepen fa-lg"></i>
+        </a>
       </div>
     </div>
-
-    <footer class="footer fixed-bottom">
-      <div class="container">
-        <h3>Created by <strong>Michael V.</strong></h3>
-        <div id="icons">
-          <a target="blank" href="https://www.freecodecamp.com/mikev8492">
-            <i class="fa fa-free-code-camp fa-lg"></i>
-          </a>
-          <a target="blank" href="https://www.linkedin.com/in/michael-villarreal-66045bb8">
-            <i class="fa fa-linkedin-square fa-lg"></i>
-          </a>
-          <a target="blank" href="https://github.com/mikev8492">
-            <i class="fa fa-github fa-lg"></i>
-          </a>
-          <a target="blank" href="https://www.codepen.io/mikev8492">
-            <i class="fa fa-codepen fa-lg"></i>
-          </a>
-        </div>
-      </div>
-    </footer>
+  </footer>
 </body>
 </html>

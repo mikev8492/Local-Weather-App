@@ -1,27 +1,43 @@
-
 $(document).ready(function() {
+  $("#btn").text("Retrieving Location...").removeClass("btn btn-lg btn-outline-info").removeAttr("href");
   $("#weather").hide();
-  navigator.geolocation.getCurrentPosition(function(position){
+  navigator.geolocation.getCurrentPosition(function(position) {
     lat = position.coords.latitude;
     lon = position.coords.longitude;
 
     console.log(position.coords.latitude, position.coords.longitude);
   });
-  var api = "https://api.darksky.net/forecast/";
-  var key = "541d3847a8c50356549eeae2a0a9798b";
+  var api = "https://fcc-weather-api.glitch.me/api/current?";
   var lat, lon;
-  var celsiusRequest = "units=metric";
-  var farenheitRequest = "units=imperial";
+  setTimeout(function() {
+    $("#btn").text("Get Forecast").addClass("btn btn-lg btn-outline-info").attr("href");
+   }, 9000);
 
-  $(".btn").on("click", function() {
+  $("#btn").on("click", function() {
     $("#weather").show();
-    $(".btn").hide();
+    $("#btn").hide();
     console.log("hello");
 
-    var url = api + key + "/" + lat + "," + lon;
+    var url = api + "lat=" + lat + "&lon=" + lon;
     console.log(url);
     $.getJSON(url).done(function(data) {
-      $("#city").text(data.timezone);
+      var tempC = Math.round(data.main.temp) + String.fromCharCode(176) + "C";
+      var tempF = Math.round(data.main.temp) * (9 / 5) + 32 + String.fromCharCode(176) + "F";
+      $("#city").text(data.name + ", ");
+      $("#country").text(data.sys.country);
+      $("#temp").text(tempF);
+      $("#description").text(data.weather[0].description);
+      $("#icon").html("<img src =" + "'" + data.weather[0].icon + "'>");
+      $("#humidity").text(data.main.humidity + String.fromCharCode(37));
+
+      $("#temp").on("click", function(){
+       if($("#temp").text() == tempF){
+         $("#temp").text(tempC);
+       }else {
+         $("#temp").text(tempF);
+       }
+      });
     });
   });
+
 });

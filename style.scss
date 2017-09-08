@@ -23,6 +23,15 @@ body {
   .card{
     display: inline-block;
     width: 28%;
+    min-height: 4.5em;
+    font-size: 25px;
+    #temp:hover{
+      color: #006dcc;
+      cursor: pointer;
+    }
+    img{
+      width: 25%; 
+    }
   }
 }
 
