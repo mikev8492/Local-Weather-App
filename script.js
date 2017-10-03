@@ -22,7 +22,7 @@ $(document).ready(function() {
     console.log(url);
     $.getJSON(url).done(function(data) {
       var tempC = Math.round(data.main.temp) + String.fromCharCode(176) + "C";
-      var tempF = Math.round(data.main.temp) * (9 / 5) + 32 + String.fromCharCode(176) + "F";
+      var tempF = Math.round((data.main.temp) * (9 / 5) + 32) + String.fromCharCode(176) + "F";
       $("#city").text(data.name + ", ");
       $("#country").text(data.sys.country);
       $("#temp").text(tempF);
